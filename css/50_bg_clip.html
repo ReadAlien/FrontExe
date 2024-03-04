@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .desc {
+            border: 5px dotted #222;
+            background-color: #ffd9a0;
+            width: 350px; 
+            padding: 20px;
+            margin-right: 20px;
+            float: left;
+        }
+
+        #clip-border {
+            background-clip: border-box;
+        }
+
+        #clip-clip {
+            background-clip: padding-box;
+        }
+
+        #clip-content {
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class = "desc" id = "clip-border">
+            <h1>블루베리</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis architecto provident ullam numquam esse vero!</p>
+            <p>Lorem ipsum dolor,<em> sit amet consectetur</em><br>adipisicing elit.</p>
+        </div>
+
+        <div class = "desc" id = "clip-clip">
+            <h1>블루베리</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis architecto provident ullam numquam esse vero!</p>
+            <p>Lorem ipsum dolor,<em> sit amet consectetur</em><br>adipisicing elit.</p>
+        </div>
+
+        <div class = "desc" id = "clip-content">
+            <h1>블루베리</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis architecto provident ullam numquam esse vero!</p>
+            <p>Lorem ipsum dolor,<em> sit amet consectetur</em><br>adipisicing elit.</p>
+        </div>
+    </div>
+</body>
+</html>
