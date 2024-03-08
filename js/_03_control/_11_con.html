@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #panel {
+                width: 600px;
+                height: 400px;
+                border: 1px solid #999;
+                position: relative;
+            }
+
+            #fish {
+                position: absolute;
+                left: 200px;
+                top: 150px;
+            }
+        </style>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const fish = document.getElementById('fish');
+                let left = 200;
+                let top = 150;
+
+                document.addEventListener('keydown', function (e) {
+                    console.log('입력 키 코드: ' + e.keyCode);
+
+                    switch (e.keyCode) {
+                        case 37:
+                            left -= 10;
+                            fish.style.left = left + 'px';
+                            break;
+                        case 39:
+                            left += 10;
+                            fish.style.left = left + 'px';
+                            break;
+                        case 38:
+                            top -= 10;
+                            fish.style.top = top + 'px';
+                            break;
+                        case 40:
+                            top += 10;
+                            fish.style.top = top + 'px';
+                            break;
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <div id="panel">
+            <img src="../../images2/fish.png" id="fish">
+        </div>
+    </body>
+</html>
