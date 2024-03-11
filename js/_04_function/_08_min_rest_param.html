@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <script>
-        function min(...items) {
+        function min(...items){
             let min = items[0];
-
-            for(let i = 1; i < items.length; i++) {
-                if(min > items[i]) {
-                    min = items[i];
-                }
+            for(const item of items){
+                if(min > item)
+                    min = item;
             }
-
             return min;
         }
 
-        console.log(min(25, 22, 215, 321, 23, 1, 24, 4));
-        console.log(min(25, 262, 21, 31, 232, 11, 2, 43));
+        console.log(min(25, 22, 788, 12, 3, 99));
+        console.log(min(25, 22, 788, 12, 3, 99, 2, 77, 100));
     </script>
 </head>
 <body>

@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <script>
-        function callThreeTimes(callback) {
-            for(let i = 0; i < 3; i++) {
+        function callThreeTimes(callback){
+            for(let i=0;i<3;i++)
                 callback(i);
-            }
-
-            function print(i) {
-                console.log(`${i}번째 함수 호출`);
-            }
-
-            callThreeTimes(print);
         }
+
+        // 선언적 함수로 callback함수 정의
+        function print(i){
+            console.log(`${i}번째 함수 호출`);
+        }
+
+        callThreeTimes(print);
     </script>
 </head>
 <body>
